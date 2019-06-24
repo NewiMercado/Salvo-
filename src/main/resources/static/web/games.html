@@ -1,0 +1,59 @@
+    <!DOCTYPE HTML>
+    <html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="UTF-8">
+        <title>Salvo!</title>
+        <link rel="stylesheet" href="games.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+      <h1>Games</h1>
+    <div class="container-fluid" id="games">
+        <div class="log">
+            <form id="login-form" onsubmit="return false">
+                <label>Username: <input type="text" name="username"></label>
+                <label>Password: <input type="text" name="password"></label>
+                <button>Log in</button>
+                <button>Create an account</button>
+            </form>
+            <form id="logout-form" onsubmit="return false">
+                <button>Log out</button>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-2">
+            <ol class="list-group" v-for="game in games">
+                <li class="list-group-item">{{game.id}}</li>
+                <li class="list-group-item">{{game.created}}</li>
+                <li class="list-group-item">Players:
+                    <ol class="list-group" v-for="gamePlayer in game.gamePlayer">
+                        <li class="list-group-item">{{gamePlayer.player.email}}</li>
+                    </ol>
+                </li>
+            </ol>
+            </div>
+        </div>
+        <div class="scores">
+            <table class="table-responsive">
+                <thead>
+                    <tr>
+                        <tl>Name</tl>
+                        <tl>Total</tl>
+                        <tl>Won</tl>
+                        <tl>Lost</tl>
+                        <tl>Tied</tl>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="games.js"></script>
+
+    </body>
+    </html>

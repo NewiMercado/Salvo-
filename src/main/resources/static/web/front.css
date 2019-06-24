@@ -1,0 +1,38 @@
+body {
+  background: red !important;
+  margin: 100px !important;
+  text-align: center !important;
+}
+
+.box,
+.fbox  {
+  border-radius: 3px;
+  border: 2px solid black;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: -3px;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+}
+
+.loc {
+    background-color: blue !important;
+}
+
+.shot {
+    background-color: green !important;
+}
+
+.wrapper,
+ .wrapper2 {
+  width: 500px;
+  display: inline-block !important;
+  margin-left: 20px;
+}
